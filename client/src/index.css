@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: linear-gradient(to bottom, #eaebf775, #ddddee75);
+  }
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #afb2c975;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+}
+
+@keyframes expandFromCenter {
+  0% {
+    width: 0;
+    left: 50%;
+    bottom: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+}
+
+@keyframes shrinkToCenter {
+  0% {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+  }
+  100% {
+    width: 0;
+    left: 50%;
+    bottom: 0;
+  }
+}
+
+.animate-expand-center {
+  animation: expandFromCenter 0.5s forwards;
+}
+.animate-shrink-center {
+  animation: shrinkToCenter 0.2s forwards;
+}
